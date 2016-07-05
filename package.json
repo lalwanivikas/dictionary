@@ -1,0 +1,14 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "description": "a simple dictionary app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vikas Lalwani",
+  "license": "ISC",
+  "engines": {
+    "node": "6.2.0"
+  }
+}

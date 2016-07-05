@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+- template for every word page 
+- {{keys}} will get replaced by appropirate strings
+-->
+
+<head>
+	<title>{{title}} meaning | Dictionary</title>
+	<meta charset="utf-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{title}} meaning | learn meaning, pronunciation and usage examples of {{title}}.">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="./static/style.css">
+	<style type="text/css">		
+		
+		.container {
+			margin-top: 5%;
+			padding: 20px;
+		}
+
+		h1 {
+			font-size: 3rem;	
+		}
+
+		/* icon and input styles */
+		.icon {
+		  width: 50px;
+		  padding-bottom: 8px;
+		  vertical-align: middle;
+		}
+
+		input {
+			width: 87%;
+		}
+		.autosuggest-list {
+	    width: 400px;
+	    margin: -21px 53px 20px;
+  	}
+
+		@media (max-width: 500px) {
+			
+			.container {
+				margin-top: 2%;
+			}
+			
+			h1 {
+				font-size: 2.2rem;	
+			}
+			
+			.heading p {
+				font-size: 1.5rem;
+			}
+
+			h2 {
+				font-size: 1.8rem;
+				font-weight: 600;
+			}
+
+			input {
+				width: 100%;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			/* icon and input styles */
+			.icon {
+			  display: none;
+			}
+
+			.autosuggest-list {
+		    width: 90%;
+		    left: 5%;
+		    margin: -1px auto;
+  		}
+
+			.audio div {
+			  width: 25%;
+			}
+			
+		}
+
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="search">
+			<a href="/"><img class="icon" src="./static/3d-dictionary.svg"></a>
+			<input type="text">
+		</div>
+		
+		<ul class="autosuggest-list"></ul>
+		<div class="search-list"></div>		
+		
+		<div class="word-details">
+			
+			<div class="heading">
+				<h1>{{title}}</h1>
+				<p>{{part_of_speech}}</p>
+			</div>
+			<div class="audio">
+				{{audio}}
+			</div>
+			
+			{{meaning}}
+			{{examples}}
+		
+		</div>
+		
+		<h4><a href="http://vikaslalwani.com/">Vikas Lalwani</a></h4>
+	</div>
+	
+	<script type="text/javascript">
+		
+		// playing audio files if available
+		var speaker = document.querySelectorAll('.audio img');
+		if (speaker) {
+			for (var i = 0; i < speaker.length; i++) {
+				speaker[i].addEventListener("click", function(e) {
+					e.target.nextElementSibling.play();
+				});
+			}
+		}
+
+		// server might send UK audio div at first place
+		// so interchanging UK and US. 
+		// need to keep US at first to maintain consistency
+		if (document.querySelector('.audio div')) {
+			var audioDiv = document.querySelector('.audio');
+			var firstChild = audioDiv.firstElementChild;
+			console.log(firstChild.firstElementChild.innerHTML);
+			if (firstChild.firstElementChild.innerHTML === "UK") {
+				console.log("UK was first!");
+				audioDiv.appendChild(firstChild);
+			}
+		}
+
+	</script>
+	<script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>

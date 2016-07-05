@@ -1,0 +1,299 @@
+/* 
+	Reset CSS:
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of reset CSS */
+
+/* border box */
+html {
+  box-sizing: border-box;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */  
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+b {
+	font-weight: bold;
+}
+
+/* main app styles */
+
+body {
+	width: 500px;
+	margin: 0 auto;
+	background-color: #FAFAFA;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	line-height: 1.45;
+	color: #111;
+}
+
+.container {
+	margin: 10% auto;
+	padding: 15px;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+h1 {
+	font-size: 3.5rem;
+	font-weight: 900;
+	text-align: center;
+	margin: 1% 0 3%;
+}
+
+h1 a {
+	color: #111;
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: left;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-align: center;
+	margin: 5% 0 2%;
+}
+
+h4 a {
+	color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #4D90FE;
+  padding: 2px 4px;
+}
+
+h4 a:hover {
+	background: rgba(75%, 75%, 75%, .25);
+  border-bottom-width: 3px;
+  margin-bottom: -2px;
+}
+
+input {
+	width: 100%;
+	height: 60px;
+	margin: 20px 0;
+	padding: 10px;
+	border: 1px solid #d9d9d9;
+	outline: none;
+	font-size: 1.5rem;
+	resize: none;
+	line-height: 1.5rem;
+}
+
+input:hover {
+	border-color: #C0C0C0;
+}
+
+input:focus {
+	border-color: #4D90FE;
+}
+
+
+/* Styles for autosuggestions */
+
+.autosuggest-list {
+	display: none;
+  width: 470px;
+  margin: -21px 0 20px;
+  background: #fff;
+	border: 1px solid #CCC;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	cursor: pointer;
+	position: absolute;
+	z-index: 10;
+}
+
+.suggestions {
+	padding: 5px 10px;
+	font-weight: 600;
+}
+.highlighted {
+	background-color: #eee;
+}
+
+
+/* Styles for autosuggestions */
+
+.search-list {
+	
+}
+
+a.searchResults {
+	display: block;
+	text-decoration: none;
+	color: #111;
+	padding: 10px;
+	margin: 15px 0;
+	background-color: #FAFAFA;
+	transition: all 0.25s ease;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),0 0px 0px 1px rgba(0, 0, 0, 0.02);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08),0 0px 0px 1px rgba(0, 0, 0, 0.02);
+	cursor: pointer;
+}
+
+a.searchResults:hover {
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+a.searchResults div p {
+	display: inline-block;
+	padding-right: 10px;
+	margin: 10px 0px;
+}
+
+.word {
+	font-size: 25px;
+	font-weight: 900;
+}
+
+/*
+******
+
+Styles for word pages
+
+******
+*/
+
+
+/* word and part of speech */
+
+.heading h1 {
+	display: inline-block;
+}
+
+.heading p {
+	display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-left: 15px;
+}
+
+/* audio icons */
+
+.audio div {
+	display: inline-block;
+  width: 18%;
+}
+
+.audio div h4 {
+	display: inline-block;
+	margin: 0 2% 0 0;
+	font-weight: 600;
+}
+
+.audio div img {
+	width: 30px;
+	vertical-align: top;
+	margin-right: 4%;
+	margin-left: 4%;
+	padding-top: 2px;
+	cursor: pointer;
+}
+
+
+/* meaning and example sections*/
+.section-heading {
+	margin-top: 6%;
+}
+
+.meaning {
+	color: #555;
+	font-weight: 600;
+	font-size: 1.2em;
+}
+
+.usage {
+  margin: 0 0 6% 5%;
+  list-style: circle;
+}
+
+.usage li {
+	padding: .5% 0;
+}
+
+
+/* 
+** Making it responsive
+*/
+
+
+@media (max-width: 500px) {
+	
+	body {
+		width: 100%;
+	}
+	
+	.container {
+		width: 95%;
+	}
+	
+	.autosuggest-list {
+	  width: 92%;
+    left: 4%;
+	  /*margin: -21px 0 20px;*/
+	}
+
+	.suggestions {
+		padding: 5px;
+	}
+	
+}
+
+

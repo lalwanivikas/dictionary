@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>boast | Dictionary</title>
+	<meta charset="utf-8" /> 
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="./static/style.css">
+	<style type="text/css">
+		.container {
+			margin-top: 5%;
+			padding: 20px;
+		}
+
+		/* icon and input styles */
+		.icon {
+		  width: 50px;
+		  padding-bottom: 8px;
+		  vertical-align: middle;
+		}
+
+		input {
+			width: 87%;
+		}
+		.autosuggest-list {
+	    width: 400px;
+	    margin: -21px 53px 20px;
+  	}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="search">
+			<a href="/"><img class="icon" src="./static/3d-dictionary.svg"></a>
+			<input type="text">
+		</div>
+		
+		<ul class="autosuggest-list"></ul>
+		<div class="search-list"></div>		
+		
+		<div class="word-details">
+			<div class="heading">
+				<h1>boast</h1>
+				<p>verb</p>
+			</div>
+			
+			<div class="audio">
+				<h4>US</h4>
+				<img class="uk-audio" src="./static/speaker.svg">
+				<audio class="us-audio" src="http://api.pearson.com/v2/dictionaries/assets/ldoce/us_pron/boast1.mp3"></audio>
+				
+				<h4>UK</h4>
+				<img class="uk-audio" src="./static/speaker.svg">
+				<audio class="uk-audio" src="http://api.pearson.com/v2/dictionaries/assets/ldoce/gb_pron/boast_n0205.mp3"></audio>
+			</div>
+			
+			<div>
+				<h2 class="section-heading">Meaning and Usage</h2>
+				<hr>
+				<p class="meaning">to talk too proudly about your abilities, achievements, or possessions</p>
+				<ul class="usage">
+					<li>I wouldn't be afraid,' she boasted.</li>
+					<li>Amy boasted that her son was a genius.</li>
+					<li>He's boasting about how much money he has made.</li>
+					<li>The company is inclined to boast of its success.</li>
+				</ul>
+				
+				<p class="meaning">if a place, object, or organization boasts something, it has something that is very good</p>
+				<ul class="usage">
+					<li>The city boasts two excellent museums.</li>
+					<li>The Society boasts 3,000 members worldwide.</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h2 class="section-heading">More examples</h2>
+				<hr>
+				<ul class="usage">
+					<li>Each luxury home boasts an indoor pool and three-car garage.</li>
+					<li>Hank was boasting that he could drink a case of beer by himself.</li>
+					<li>I don't want to boast, but I was the first woman ever to win the competition.</li>
+					<li>Scott was boasting about winning the game against Melrose High.</li>
+					<li>She's always boasting about how clever her children are.</li>
+					<li>The golf course is surrounded by hills and boasts some of the finest scenery in the country.</li>
+					<li>The new athletic center boasts an Olympic-size swimming pool.</li>
+					<li>Also, more than half of the associates can boast of perfect attendance records.</li>
+					<li>He has an understanding equal to any public object, and possesses an energy of mind that few Men can boast of.</li>
+					<li>It boasts a post box, stamp machine as well as an A/B button telephone.</li>
+					<li>On the scaffold an unrepentant Jarman boasted of some sixty or seventy murders.</li>
+					<li>She boasted that she had two bedrooms and a bathroom, which had been constructed from a third bedroom.</li>
+					<li>The inside of the theater boasted more substantial fare.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<h4><a href="http://vikaslalwani.com/">Vikas Lalwani</a></h4>
+		<script type="text/javascript">
+			var speaker = document.querySelectorAll('.audio img');
+			for (var i = 0; i < speaker.length; i++) {
+				speaker[i].addEventListener("click", function(e) {
+					e.target.nextElementSibling.play();
+				})
+			}
+		</script>
+		<script type="text/javascript" src="./static/script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+
+To be filled via template:
+- Page title
+- Word
+- Part of speech
+- UK and US audio links
+
+- Meaning - variable
+- Examples - variable
+
+- More examples - variable
+
+ -->
+
+
